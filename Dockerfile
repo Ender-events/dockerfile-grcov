@@ -2,7 +2,7 @@ FROM rust:slim
 
 RUN rustup install nightly \
     && cargo install grcov \
-    && apt-get update && apt-get install -y zip \
+    && apt-get update && apt-get install -y curl git wget zip \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf ~/.cargo/registry
